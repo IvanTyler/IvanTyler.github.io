@@ -1,0 +1,45 @@
+@import url('../less/mixins/main.less');
+
+.about-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+
+    @media (max-width: 580px) {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 32px;
+    }
+
+    &__item:first-of-type>&__link {
+        background-color: var(--color-main_7);
+        color: var(--color-main_6);
+        transition: background-color var(--transition);
+
+        &:hover {
+            background-color: var(--color-main_5);
+            color: var(--color-main_7);
+        }
+    }
+
+    &__item:last-of-type>&__link {
+        background-color: transparent;
+        color: var(--color-main_7);
+        border: solid 2px var(--color-main_3);
+        transition: background-color var(--transition);
+
+        &:hover {
+            background-color: var(--color-main_7);
+            color: var(--color-main_6);
+        }
+    }
+
+    &__link {
+        .button();
+
+        @media (max-width: 580px) {
+            height: 47px;
+        }
+    }
+}

@@ -1,13 +1,27 @@
 @font-face {
-	font-family: 'FuturaPT';
-	font-weight: 500;
-	src: url('./FuturaPT/FuturaPT-Medium.woff2') format('woff2'),
-		url('./FuturaPT/FuturaPT-Medium.woff2') format('woff');
+	font-family: 'Merriweather';
+	font-weight: 400;
+	src: url('./merriweather/Merriweather-Regular.ttf') format('ttf'),
+		url('./merriweather/Merriweather-Regular.woff') format('woff')
 }
 
 @font-face {
-	font-family: 'FuturaPT';
+	font-family: 'Merriweather';
 	font-weight: 700;
-	src: url('./FuturaPT/FuturaPT-bold.woff2') format('woff2'),
-		url('./FuturaPT/FuturaPT-bold.woff2') format('woff');
+	src: url('./merriweather/Merriweather-Bold.ttf') format('ttf'),
+		url('./merriweather/Merriweather-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Golos-text';
+	font-weight: 500;
+	src: url('./golos-text/GolosTextVF-Regular.woff') format('ttf'),
+		url('./golos-text/GolosTextVF-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Golos-text';
+	font-weight: 600;
+	src: url('./golos-text/GolosText-Bold.woff') format('woff'),
+		url('./golos-text/GolosText-Bold.woff2') format('woff2');
 }
