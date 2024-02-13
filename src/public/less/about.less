@@ -64,8 +64,6 @@
     }
 
     &__text {
-        &:first-of-type {}
-
         &:last-of-type {
             text-align: right;
         }
@@ -74,8 +72,8 @@
     &__title,
     &__text {
         .title();
-        font-size: clamp(36px, 5vw, 60px);
-        line-height: clamp(42px, 5vw, 66px);
+        font-size: clamp(30px, 5vw, 60px);
+        line-height: clamp(35px, 5vw, 66px);
         font-weight: 400;
         text-transform: uppercase;
         // 1920 / 60 = 1vw 32
@@ -91,12 +89,10 @@
         margin-top: 24px;
         font-family: var(--font-main_2);
         color: var(--color-main_3);
-        font-size: 18px;
-        line-height: 23.4px;
+        font-size: clamp(15px, 3vw, 18px);
+        line-height: clamp(18px, 3vw, 21px);
         font-weight: 500;
     }
-
-    &__nav {}
 
     &__right {
         grid-area: right;

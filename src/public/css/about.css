@@ -78,8 +78,8 @@
 .about__text {
   color: var(--color-main_3);
   font-family: var(--font-main_1);
-  font-size: clamp(36px, 5vw, 60px);
-  line-height: clamp(42px, 5vw, 66px);
+  font-size: clamp(30px, 5vw, 60px);
+  line-height: clamp(35px, 5vw, 66px);
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -91,8 +91,8 @@
   margin-top: 24px;
   font-family: var(--font-main_2);
   color: var(--color-main_3);
-  font-size: 18px;
-  line-height: 23.4px;
+  font-size: clamp(15px, 3vw, 18px);
+  line-height: clamp(18px, 3vw, 21px);
   font-weight: 500;
 }
 .about__right {
