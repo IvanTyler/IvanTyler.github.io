@@ -1,0 +1,122 @@
+@import url('../less/mixins/main.less');
+
+.about-tournament {
+    margin-top: 64px;
+
+    @media (max-width: 800px) {
+        margin-top: 34px;
+    }
+
+    &__wrapper-img {
+        grid-area: wrapper-img;
+
+        @media (max-width: 800px) {
+            max-width: 400px;
+            justify-self: center;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__description {
+        grid-area: description;
+        margin-top: 60px;
+
+        @media (max-width: 1250px) {
+            margin-top: 0;
+        }
+
+        @media (max-width: 800px) {
+            margin-top: 44px;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        align-self: end;
+        .title();
+        font-size: clamp(25px, 3vw, 36px);
+        line-height: clamp(31px, 3vw, 41px);
+        font-weight: 400;
+
+        @media (max-width: 800px) {
+            text-align: center;
+        }
+
+        @media (max-width: 450px) {
+            text-align: left;
+        }
+    }
+
+    &__text-highlight {
+        .title();
+        font-weight: 700;
+        color: var(--color-main_2);
+    }
+
+    &__any-questions {
+        grid-area: any-questions;
+        display: inline-block;
+        margin-top: 48px;
+        font-size: 20px;
+        line-height: 24px;
+        color: var(--color-main_4);
+        font-family: var(--font-main_2);
+
+        @media (max-width: 1250px) {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 450px) {
+            margin-top: 40px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+
+.about-tournament-container {
+    display: grid;
+    grid-template-columns: minmax(474px, 474px) minmax(auto, 704px);
+    grid-template-rows: minmax(147px, auto) minmax(247px, auto) 1fr;
+    grid-template-areas:
+        'wrapper-img title'
+        'wrapper-img description'
+        'wrapper-img any-questions'
+    ;
+    gap: 0 44px;
+
+    @media (max-width: 1250px) {
+        grid-template-columns: minmax(auto, 474px) minmax(auto, 704px);
+        grid-template-rows: initial;
+        grid-template-areas:
+            'wrapper-img title'
+            'wrapper-img any-questions'
+            'description description'
+        ;
+    }
+
+    @media (max-width: 1250px) {
+        grid-template-columns: minmax(auto, 474px) minmax(auto, 704px);
+        grid-template-rows: initial;
+        grid-template-areas:
+            'wrapper-img title'
+            'wrapper-img any-questions'
+            'description description'
+        ;
+    }
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'wrapper-img'
+            'title'
+            'description'
+            'any-questions'
+        ;
+    }
+}

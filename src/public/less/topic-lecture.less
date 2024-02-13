@@ -34,14 +34,22 @@
     }
 
     &__name-lecture {
+        display: inline-block;
         font-family: var(--font-main_1);
-        color: var(--color-main_2)
+        color: var(--color-main_2);
+        margin-top: 7px;
+        font-weight: 700;
+
+        @media (max-width: 800px) {
+            margin-top: 0;
+        }
     }
 
     &__title {
         .title();
         font-size: clamp(25px, 3vw, 36px);
-        line-height: clamp(31px, 3vw, 39px);
+        line-height: clamp(31px, 3vw, 41px);
+        font-weight: 400;
 
         @media (max-width: 800px) {
             display: none;
@@ -62,6 +70,10 @@
 
         @media (max-width: 800px) {
             display: block;
+        }
+
+        @media (max-width: 450px) {
+            text-align: left;
         }
     }
 

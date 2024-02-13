@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 .header__link {
   display: inline-block;
