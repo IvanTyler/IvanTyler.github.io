@@ -4,7 +4,7 @@
     display: grid;
     align-items: center;
     justify-content: space-between;
-    grid-template-columns: minmax(auto, 680px) minmax(394px, auto);
+    grid-template-columns: minmax(auto, 770px) minmax(394px, auto);
     grid-template-areas:
         'title wrapper-img'
     ;
@@ -37,7 +37,6 @@
         display: inline-block;
         font-family: var(--font-main_1);
         color: var(--color-main_2);
-        margin-top: 7px;
         font-weight: 700;
 
         @media (max-width: 800px) {
@@ -50,6 +49,7 @@
         font-size: clamp(25px, 3vw, 36px);
         line-height: clamp(31px, 3vw, 41px);
         font-weight: 400;
+        text-transform: uppercase;
 
         @media (max-width: 800px) {
             display: none;

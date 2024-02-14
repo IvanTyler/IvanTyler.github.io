@@ -1,0 +1,29 @@
+@import url('../less/mixins/main.less');
+
+.stages-transformation {
+    margin-top: 200px;
+
+    &__title {
+        max-width: 780px;
+        .title();
+        text-transform: uppercase;
+        font-size: clamp(36px, 4vw, 54px);
+        line-height: clamp(35px, 4vw, 60px);
+        font-weight: 400;
+    }
+
+    &__postscript {
+        display: inline-block;
+        font-size: clamp(20px, 1vw, 18px);
+        line-height: clamp(24px, 1vw, 22px);
+        font-family: var(--font-main_2);
+        color: var(--color-main_4);
+        font-weight: 400;
+        max-width: 310px;
+    }
+}
+
+.stages-transformation-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}

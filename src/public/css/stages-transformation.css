@@ -1,0 +1,43 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 49px;
+  height: 72px;
+  text-align: center;
+  font-family: var(--font-main_2);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  border-radius: 66px;
+  cursor: pointer;
+}
+.title {
+  color: var(--color-main_3);
+  font-family: var(--font-main_1);
+}
+.stages-transformation {
+  margin-top: 200px;
+}
+.stages-transformation__title {
+  max-width: 780px;
+  color: var(--color-main_3);
+  font-family: var(--font-main_1);
+  text-transform: uppercase;
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: clamp(35px, 4vw, 60px);
+  font-weight: 400;
+}
+.stages-transformation__postscript {
+  display: inline-block;
+  font-size: clamp(20px, 1vw, 18px);
+  line-height: clamp(24px, 1vw, 22px);
+  font-family: var(--font-main_2);
+  color: var(--color-main_4);
+  font-weight: 400;
+  max-width: 310px;
+}
+.stages-transformation-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}

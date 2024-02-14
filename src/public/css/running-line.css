@@ -2,7 +2,7 @@
   background-color: var(--color-main_2);
 }
 .enable-animation .runnig-line-list {
-  animation: move 50s linear infinite;
+  animation: move 70s linear infinite;
 }
 .marquee__content {
   display: flex;
