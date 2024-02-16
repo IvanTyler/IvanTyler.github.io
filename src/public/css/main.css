@@ -767,7 +767,25 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), auto));
   }
 }
-.stages-transformation-list__item {
+@media (max-width: 395px) {
+  .stages-transformation-list {
+    display: none;
+  }
+}
+.stages-transformation-wrapper-mobile {
+  overflow: auto;
+  width: 335px;
+}
+.stages-transformation-list.mobile {
+  display: none;
+  grid-template-columns: repeat(5, minmax(335px, 1fr));
+}
+@media (max-width: 395px) {
+  .stages-transformation-list.mobile {
+    display: grid;
+  }
+}
+.stages-transformation-card {
   position: relative;
   display: grid;
   grid-template-columns: 36px 1fr;
@@ -775,35 +793,7 @@ body {
   padding: 20px;
   background-color: var(--color-main_1);
 }
-.stages-transformation-list__item:nth-child(5) > span:last-child {
-  max-width: 240px;
-}
-.stages-transformation-list__item:nth-child(3) {
-  grid-column: 3 / span 1;
-  grid-row: 1 / span 2;
-}
-@media (max-width: 1230px) {
-  .stages-transformation-list__item:nth-child(3) {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-  }
-}
-.stages-transformation-list__item:nth-child(7) {
-  grid-template-columns: 36px minmax(auto, 446px) 1fr;
-  grid-column: 2 / span 2;
-}
-@media (max-width: 1230px) {
-  .stages-transformation-list__item:nth-child(7) {
-    grid-template-columns: 36px minmax(auto, 100%) 1fr;
-    grid-column: 1 / span 2;
-  }
-}
-@media (max-width: 770px) {
-  .stages-transformation-list__item:nth-child(7) {
-    grid-column: 1 / span 1;
-  }
-}
-.stages-transformation-list__item::after {
+.stages-transformation-card::after {
   content: '';
   position: absolute;
   top: 0;
@@ -814,24 +804,7 @@ body {
   background-image: url('../img/bg__item.png');
   background-size: cover;
 }
-.stages-transformation-list__img,
-.stages-transformation-list__number,
-.stages-transformation-list__description {
-  position: relative;
-  z-index: 2;
-}
-.stages-transformation-list__img {
-  margin-right: -62px;
-  margin-top: -97px;
-}
-@media (max-width: 1230px) {
-  .stages-transformation-list__img {
-    justify-self: end;
-    margin-top: -77px;
-    width: 317px;
-  }
-}
-.stages-transformation-list__number {
+.stages-transformation-card__number {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -843,10 +816,72 @@ body {
   font-family: var(--font-main_2);
   font-weight: 600;
 }
-.stages-transformation-list__description {
+.stages-transformation-card__description {
   display: inline-block;
   color: var(--color-main_3);
   font-family: var(--font-main_2);
   font-size: 20px;
   line-height: 24px;
+}
+.stages-transformation-card__img,
+.stages-transformation-card__number,
+.stages-transformation-card__description {
+  position: relative;
+  z-index: 2;
+}
+.stages-transformation-card__img.desktop {
+  margin-right: -62px;
+  margin-top: -97px;
+}
+@media (max-width: 1230px) {
+  .stages-transformation-card__img.desktop {
+    justify-self: end;
+    margin-top: -77px;
+    width: 317px;
+  }
+}
+@media (max-width: 800px) {
+  .stages-transformation-card__img.desktop {
+    position: absolute;
+    margin-top: -55px;
+    margin-right: 0;
+    width: 160px;
+  }
+}
+.stages-transformation-card.desktop:nth-child(5) > span:last-child {
+  max-width: 240px;
+}
+@media (max-width: 1230px) {
+  .stages-transformation-card.desktop:nth-child(5) > span:last-child {
+    max-width: initial;
+  }
+}
+.stages-transformation-card.desktop:nth-child(3) {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+}
+@media (max-width: 1230px) {
+  .stages-transformation-card.desktop:nth-child(3) {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+}
+.stages-transformation-card.desktop:nth-child(7) {
+  grid-template-columns: 36px minmax(auto, 446px) 1fr;
+  grid-column: 2 / span 2;
+}
+@media (max-width: 1230px) {
+  .stages-transformation-card.desktop:nth-child(7) {
+    grid-template-columns: 36px minmax(auto, 100%) 1fr;
+    grid-column: 1 / span 2;
+  }
+}
+@media (max-width: 770px) {
+  .stages-transformation-card.desktop:nth-child(7) {
+    grid-column: 1 / span 1;
+  }
+}
+.stages-transformation-card.mobile {
+  padding-top: 62px;
+  gap: 28px 16px;
 }
