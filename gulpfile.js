@@ -9,7 +9,7 @@ gulp.task('less-compile', () => {
         .pipe(gulp.dest('./src/public/css/'))
 })
 
-gulp.task('js-compile', function () {
+gulp.task('js-compile', () => {
     return gulp.src('./src/public/javaScript-compile/**/*.js')
         .pipe(concat('main.js'))
         .pipe(gulp.dest('./src/public/javaScript/'));

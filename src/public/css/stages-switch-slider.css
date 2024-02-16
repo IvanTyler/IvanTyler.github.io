@@ -1,0 +1,13 @@
+.stages-switch-slider {
+  display: flex;
+  gap: 6px;
+}
+.stages-switch-slider__item {
+  width: 10px;
+  height: 10px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+}
+.stages-switch-slider__item.active {
+  background-color: var(--color-main_3);
+}

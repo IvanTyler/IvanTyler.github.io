@@ -22,31 +22,3 @@
   gap: 20px;
   margin-top: 54px;
 }
-@media (max-width: 1230px) {
-  .stages-transformation-list {
-    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), auto));
-  }
-}
-@media (max-width: 770px) {
-  .stages-transformation-list {
-    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), auto));
-  }
-}
-@media (max-width: 395px) {
-  .stages-transformation-list {
-    display: none;
-  }
-}
-.stages-transformation-wrapper-mobile {
-  overflow: auto;
-  width: 335px;
-}
-.stages-transformation-list.mobile {
-  display: none;
-  grid-template-columns: repeat(5, minmax(335px, 1fr));
-}
-@media (max-width: 395px) {
-  .stages-transformation-list.mobile {
-    display: grid;
-  }
-}

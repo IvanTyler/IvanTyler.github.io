@@ -1,0 +1,17 @@
+.switch-slider-button {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-main_3);
+  transition: background-color var(--transition);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.switch-slider-button:hover {
+  background-color: var(--color-main_5);
+}
+.switch-slider-button.prev::after {
+  transform: rotate(-180deg);
+}
+.switch-slider-button.disabled {
+  background-color: var(--color-disabled_btn);
+}

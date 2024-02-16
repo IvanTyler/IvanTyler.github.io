@@ -6,6 +6,61 @@
     padding: 20px;
     background-color: var(--color-main_1);
 
+    &__left {
+        grid-area: left;
+    }
+
+    &__right {
+        grid-area: right;
+    }
+
+    &__left,
+    &__right {
+        position: relative;
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        gap: 16px;
+        padding: 20px;
+        background-color: var(--color-main_1);
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: inline-block;
+            background-image: url('../img/bg__item.png');
+            background-size: cover;
+        }
+    }
+
+    &:nth-child(5)>span:last-child {
+        max-width: 240px;
+
+        @media (max-width: 1230px) {
+            max-width: initial;
+        }
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+        grid-column: 1 / span 2;
+    }
+
+    &:nth-child(2) {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    &:last-child {
+        grid-column: 2 / span 2;
+        grid-template-columns: 36px minmax(auto, 446px) 1fr;
+
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -65,40 +120,22 @@
     }
 }
 
-.stages-transformation-card.desktop {
+.stages-transformation-card.combined {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'left right'
+    ;
+    gap: 20px;
+    background-color: transparent;
+    padding: 0;
 
-    &:nth-child(5)>span:last-child {
-        max-width: 240px;
-
-        @media (max-width: 1230px) {
-            max-width: initial;
-        }
-    }
-
-    &:nth-child(3) {
-        grid-column: 3 / span 1;
-        grid-row: 1 / span 2;
-
-        @media (max-width: 1230px) {
-            grid-column: 1 / span 1;
-            grid-row: 2 / span 1;
-        }
-    }
-
-    &:nth-child(7) {
-        grid-template-columns: 36px minmax(auto, 446px) 1fr;
-        grid-column: 2 / span 2;
-
-        @media (max-width: 1230px) {
-            grid-template-columns: 36px minmax(auto, 100%) 1fr;
-            grid-column: 1 / span 2;
-        }
-
-        @media (max-width: 770px) {
-            grid-column: 1 / span 1;
-        }
+    &::after {
+        content: none;
     }
 }
+
+.stages-transformation-card.desktop {}
 
 .stages-transformation-card.mobile {
     padding-top: 62px;

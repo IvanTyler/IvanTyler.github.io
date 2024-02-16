@@ -53,6 +53,23 @@ body {
 .main {
   margin-top: -60px;
 }
+.switch-slider-button {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-main_3);
+  transition: background-color var(--transition);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.switch-slider-button:hover {
+  background-color: var(--color-main_5);
+}
+.switch-slider-button.prev::after {
+  transform: rotate(-180deg);
+}
+.switch-slider-button.disabled {
+  background-color: var(--color-disabled_btn);
+}
 .header {
   position: relative;
   z-index: 3;
@@ -757,34 +774,6 @@ body {
   gap: 20px;
   margin-top: 54px;
 }
-@media (max-width: 1230px) {
-  .stages-transformation-list {
-    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), auto));
-  }
-}
-@media (max-width: 770px) {
-  .stages-transformation-list {
-    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), auto));
-  }
-}
-@media (max-width: 395px) {
-  .stages-transformation-list {
-    display: none;
-  }
-}
-.stages-transformation-wrapper-mobile {
-  overflow: auto;
-  width: 335px;
-}
-.stages-transformation-list.mobile {
-  display: none;
-  grid-template-columns: repeat(5, minmax(335px, 1fr));
-}
-@media (max-width: 395px) {
-  .stages-transformation-list.mobile {
-    display: grid;
-  }
-}
 .stages-transformation-card {
   position: relative;
   display: grid;
@@ -792,6 +781,53 @@ body {
   gap: 16px;
   padding: 20px;
   background-color: var(--color-main_1);
+}
+.stages-transformation-card__left {
+  grid-area: left;
+}
+.stages-transformation-card__right {
+  grid-area: right;
+}
+.stages-transformation-card__left,
+.stages-transformation-card__right {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 16px;
+  padding: 20px;
+  background-color: var(--color-main_1);
+}
+.stages-transformation-card__left::after,
+.stages-transformation-card__right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  background-image: url('../img/bg__item.png');
+  background-size: cover;
+}
+.stages-transformation-card:nth-child(5) > span:last-child {
+  max-width: 240px;
+}
+@media (max-width: 1230px) {
+  .stages-transformation-card:nth-child(5) > span:last-child {
+    max-width: initial;
+  }
+}
+.stages-transformation-card:nth-child(1),
+.stages-transformation-card:nth-child(3) {
+  grid-column: 1 / span 2;
+}
+.stages-transformation-card:nth-child(2) {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+}
+.stages-transformation-card:last-child {
+  grid-column: 2 / span 2;
+  grid-template-columns: 36px minmax(auto, 446px) 1fr;
 }
 .stages-transformation-card::after {
   content: '';
@@ -848,40 +884,36 @@ body {
     width: 160px;
   }
 }
-.stages-transformation-card.desktop:nth-child(5) > span:last-child {
-  max-width: 240px;
+.stages-transformation-card.combined {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'left right';
+  gap: 20px;
+  background-color: transparent;
+  padding: 0;
 }
-@media (max-width: 1230px) {
-  .stages-transformation-card.desktop:nth-child(5) > span:last-child {
-    max-width: initial;
-  }
-}
-.stages-transformation-card.desktop:nth-child(3) {
-  grid-column: 3 / span 1;
-  grid-row: 1 / span 2;
-}
-@media (max-width: 1230px) {
-  .stages-transformation-card.desktop:nth-child(3) {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-  }
-}
-.stages-transformation-card.desktop:nth-child(7) {
-  grid-template-columns: 36px minmax(auto, 446px) 1fr;
-  grid-column: 2 / span 2;
-}
-@media (max-width: 1230px) {
-  .stages-transformation-card.desktop:nth-child(7) {
-    grid-template-columns: 36px minmax(auto, 100%) 1fr;
-    grid-column: 1 / span 2;
-  }
-}
-@media (max-width: 770px) {
-  .stages-transformation-card.desktop:nth-child(7) {
-    grid-column: 1 / span 1;
-  }
+.stages-transformation-card.combined::after {
+  content: none;
 }
 .stages-transformation-card.mobile {
   padding-top: 62px;
   gap: 28px 16px;
+}
+.stages-switch-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.stages-switch-slider {
+  display: flex;
+  gap: 6px;
+}
+.stages-switch-slider__item {
+  width: 10px;
+  height: 10px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+}
+.stages-switch-slider__item.active {
+  background-color: var(--color-main_3);
 }
