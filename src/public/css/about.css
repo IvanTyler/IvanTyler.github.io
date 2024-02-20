@@ -15,6 +15,7 @@
 .title {
   color: var(--color-main_3);
   font-family: var(--font-main_1);
+  text-transform: uppercase;
 }
 .container-about {
   position: relative;
@@ -125,6 +126,18 @@
   padding: 10px;
   margin-right: -39px;
   margin-top: -44px;
+  animation: moveSun 5s linear infinite;
+}
+@keyframes moveSun {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 @media (max-width: 1050px) {
   .ellipse {

@@ -1,0 +1,20 @@
+.footer {
+  background-color: #E9DED4;
+}
+.footer__text {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: var(--font-main_2);
+  color: var(--color-main_3);
+  font-weight: 400;
+  opacity: 60%;
+}
+.container-footer {
+  padding-top: 40px;
+  padding-bottom: 72px;
+}
+@media (max-width: 450px) {
+  .container-footer {
+    padding-bottom: 60px;
+  }
+}

@@ -1,0 +1,33 @@
+.participants-slider {
+    display: grid;
+    gap: 20px;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 20px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    padding: 25px 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (max-width: 750px) {
+        grid-auto-columns: calc((100% / 2) - 20px);
+    }
+
+    @media (max-width: 450px) {
+        grid-auto-columns: 100%;
+    }
+}
+
+.participants-slider.no-transition {
+    scroll-behavior: auto;
+}
+
+.participants-slider.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+
+}

@@ -14,8 +14,15 @@
 
 @font-face {
 	font-family: 'Golos-text';
+	font-weight: 400;
+	src: url('./golos-text/GolosTextVF-Regular.woff') format('woff'),
+		url('./golos-text/GolosTextVF-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Golos-text';
 	font-weight: 500;
-	src: url('./golos-text/GolosTextVF-Regular.woff') format('ttf'),
+	src: url('./golos-text/GolosTextVF-Regular.woff') format('woff'),
 		url('./golos-text/GolosTextVF-Regular.woff2') format('woff2');
 }
 

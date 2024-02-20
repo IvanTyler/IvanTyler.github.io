@@ -1,0 +1,4 @@
+.participants-slider-wrapper {
+  display: grid;
+  grid-area: participants-slider-wrapper;
+}

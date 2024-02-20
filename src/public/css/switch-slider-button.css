@@ -1,4 +1,7 @@
 .switch-slider-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   background-color: var(--color-main_3);
@@ -6,11 +9,26 @@
   border-radius: 50%;
   cursor: pointer;
 }
+.switch-slider-button::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 20px;
+  background-image: url('../icon/arrow.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .switch-slider-button:hover {
   background-color: var(--color-main_5);
 }
-.switch-slider-button.prev::after {
+.switch-slider-button.prev {
   transform: rotate(-180deg);
+}
+.switch-slider-button.prev::after {
+  transform: translateX(2px);
+}
+.switch-slider-button.next::after {
+  transform: translateX(2px);
 }
 .switch-slider-button.disabled {
   background-color: var(--color-disabled_btn);

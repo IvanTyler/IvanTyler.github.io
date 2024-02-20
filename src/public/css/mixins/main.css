@@ -15,4 +15,5 @@
 .title {
   color: var(--color-main_3);
   font-family: var(--font-main_1);
+  text-transform: uppercase;
 }

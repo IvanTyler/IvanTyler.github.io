@@ -81,6 +81,3 @@
   width: 100%;
   background-color: var(--color-main_2);
 }
-.about-tournament-list-wrapper {
-  grid-area: tournament-list-wrapper;
-}

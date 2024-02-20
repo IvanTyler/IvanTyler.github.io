@@ -1,0 +1,8 @@
+@media (max-width: 395px) {
+  .stages-transformation-list-wrapper {
+    overflow: auto;
+  }
+  .stages-transformation-list-wrapper::-webkit-scrollbar {
+    width: 0;
+  }
+}

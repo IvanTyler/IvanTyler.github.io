@@ -15,6 +15,7 @@
 .title {
   color: var(--color-main_3);
   font-family: var(--font-main_1);
+  text-transform: uppercase;
 }
 .about-tournament {
   margin-top: 64px;
@@ -75,6 +76,7 @@
 .about-tournament__text-highlight {
   color: var(--color-main_3);
   font-family: var(--font-main_1);
+  text-transform: uppercase;
   font-weight: 700;
   color: var(--color-main_2);
 }
